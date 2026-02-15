@@ -13,9 +13,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI(title="E-Tendering System API", version="1.0.0")
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
-    return "OK"
+    return {"status": "ok"}
 
 # CORS middleware
 app.add_middleware(
