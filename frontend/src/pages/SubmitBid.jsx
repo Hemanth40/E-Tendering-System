@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { FaCoins, FaFileUpload, FaArrowLeft, FaPaperPlane, FaNetworkWired, FaShieldAlt, FaBolt } from 'react-icons/fa';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-import { FaCoins, FaFileUpload, FaArrowLeft, FaPaperPlane, FaNetworkWired, FaShieldAlt, FaBolt } from 'react-icons/fa';
 
 const SubmitBid = () => {
   const { tenderId } = useParams();

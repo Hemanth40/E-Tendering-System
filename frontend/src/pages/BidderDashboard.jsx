@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { FaTrophy, FaClock, FaCoins, FaPlus, FaEye, FaNetworkWired, FaShieldAlt, FaBolt, FaSyncAlt } from 'react-icons/fa';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-import { FaTrophy, FaClock, FaCoins, FaPlus, FaEye, FaNetworkWired, FaShieldAlt, FaBolt, FaSyncAlt } from 'react-icons/fa';
 
 const BidderDashboard = () => {
   const [myBids, setMyBids] = useState([]);
@@ -369,8 +369,8 @@ const BidderDashboard = () => {
                         )}
                       </div>
                       <span className={`px-3 py-1 rounded-full text-xs font-bold font-mono ${bid.status === 'selected' ? 'bg-green-500/20 text-green-400 border border-green-400/50' :
-                          bid.status === 'rejected' ? 'bg-red-500/20 text-red-400 border border-red-400/50' :
-                            'bg-yellow-500/20 text-yellow-400 border border-yellow-400/50'
+                        bid.status === 'rejected' ? 'bg-red-500/20 text-red-400 border border-red-400/50' :
+                          'bg-yellow-500/20 text-yellow-400 border border-yellow-400/50'
                         }`}>
                         {bid.status?.toUpperCase() || 'PENDING'}
                       </span>

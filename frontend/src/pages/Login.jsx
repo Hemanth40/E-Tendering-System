@@ -3,9 +3,9 @@ import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaUser, FaLock, FaSignInAlt, FaUserPlus, FaNetworkWired } from 'react-icons/fa';
 import axios from 'axios';
+import { showSuccessToast, showErrorToast } from '../components/Toast';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-import { showSuccessToast, showErrorToast } from '../components/Toast';
 
 const Login = () => {
   const [formData, setFormData] = useState({

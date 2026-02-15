@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { FaShieldAlt, FaHandshake, FaBolt, FaNetworkWired, FaPlus, FaList, FaChartBar, FaTrophy, FaClock, FaDollarSign } from 'react-icons/fa';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-import { FaShieldAlt, FaHandshake, FaBolt, FaNetworkWired, FaPlus, FaList, FaChartBar, FaTrophy, FaClock, FaDollarSign } from 'react-icons/fa';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({
@@ -401,11 +401,10 @@ const AdminDashboard = () => {
                         )}
                       </div>
                       <div className="flex flex-col items-end space-y-2">
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold font-mono ${
-                          bid.status === 'selected' ? 'bg-green-500/20 text-green-400 border border-green-400/50' :
-                          bid.status === 'rejected' ? 'bg-red-500/20 text-red-400 border border-red-400/50' :
-                          'bg-yellow-500/20 text-yellow-400 border border-yellow-400/50'
-                        }`}>
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold font-mono ${bid.status === 'selected' ? 'bg-green-500/20 text-green-400 border border-green-400/50' :
+                            bid.status === 'rejected' ? 'bg-red-500/20 text-red-400 border border-red-400/50' :
+                              'bg-yellow-500/20 text-yellow-400 border border-yellow-400/50'
+                          }`}>
                           {bid.status?.toUpperCase() || 'PENDING'}
                         </span>
                         {isBidPending && (
@@ -502,12 +501,11 @@ const AdminDashboard = () => {
                       )}
                     </div>
                     <div className="flex flex-col items-end space-y-2">
-                      <span className={`px-3 py-1 rounded-full text-xs font-bold font-mono ${
-                        tender.status === 'published' ? 'bg-green-500/20 text-green-400 border border-green-400/50' :
-                        tender.status === 'closed' ? 'bg-red-500/20 text-red-400 border border-red-400/50' :
-                        tender.status === 'evaluated' ? 'bg-purple-500/20 text-purple-400 border border-purple-400/50' :
-                        'bg-yellow-500/20 text-yellow-400 border border-yellow-400/50'
-                      }`}>
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold font-mono ${tender.status === 'published' ? 'bg-green-500/20 text-green-400 border border-green-400/50' :
+                          tender.status === 'closed' ? 'bg-red-500/20 text-red-400 border border-red-400/50' :
+                            tender.status === 'evaluated' ? 'bg-purple-500/20 text-purple-400 border border-purple-400/50' :
+                              'bg-yellow-500/20 text-yellow-400 border border-yellow-400/50'
+                        }`}>
                         {tender.status.toUpperCase()}
                       </span>
                       <div className="flex space-x-2">

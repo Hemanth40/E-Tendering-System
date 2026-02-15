@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 import { FaPlus, FaNetworkWired, FaShieldAlt, FaEthereum, FaCode, FaBolt, FaArrowLeft, FaSave } from 'react-icons/fa';
 import { showSuccessToast, showErrorToast } from '../components/Toast';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 const CreateTender = () => {
   const [formData, setFormData] = useState({

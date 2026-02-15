@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { FaEye, FaClock, FaDollarSign, FaCheckCircle, FaArrowLeft, FaNetworkWired } from 'react-icons/fa';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-import { FaEye, FaClock, FaDollarSign, FaCheckCircle, FaArrowLeft, FaNetworkWired } from 'react-icons/fa';
 
 const TenderDetail = () => {
   const { id } = useParams();

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { FaShieldAlt, FaEye, FaBolt, FaCalendarAlt, FaDollarSign, FaFileAlt, FaArrowRight, FaNetworkWired } from 'react-icons/fa';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-import { FaShieldAlt, FaEye, FaBolt, FaCalendarAlt, FaDollarSign, FaFileAlt, FaArrowRight, FaNetworkWired } from 'react-icons/fa';
 
 const TenderList = () => {
   const [tenders, setTenders] = useState([]);
